@@ -20,20 +20,17 @@ body {
 }
 /* Header */
 nav {
-  height: 80px;
-  align-content: center;
-  padding: 2rem;
+  padding: 1rem;
+  background: var(--black);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
 
   .nav-con {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    max-width: 1200px;
-    z-index: 100;
     display: flex;
-    background: var(--black);
     justify-content: space-between;
-    padding: 2rem;
+
     .logo {
       font-size: clamp(35px, 2.5vw, 46px);
       color: var(--red);
@@ -78,7 +75,8 @@ nav {
 
   .hero-con {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+    gap: 3rem;
     align-items: center;
     gap: 2rem;
     padding: 2rem;
@@ -161,7 +159,7 @@ nav {
     text-align: center;
     animation: autoShow both;
     animation-timeline: view(70% 5%);
-    margin-bottom: 8rem;
+    margin-bottom: 7rem;
 
     span {
       padding: 1rem 2rem;
@@ -175,8 +173,6 @@ nav {
     gap: 3rem;
     perspective: 1000px;
     position: relative;
-   
-
     .services-item {
       transition: transform 1s;
       transform-style: preserve-3d;
@@ -229,7 +225,7 @@ nav {
         position: absolute;
         left: 5%;
         right: 5%;
-        bottom: -4rem;
+        bottom: -3rem;
         text-align: center;
         padding: 1rem;
         border-radius: 10px;
@@ -257,14 +253,13 @@ nav {
 @media only screen and (max-width: 600px) {
   /* Header */
   nav {
-    height: auto;
     .nav-con {
       .menu {
         flex-direction: column;
         text-align: center;
         position: absolute;
         right: 0;
-        top: 50px;
+        top: 4rem;
         padding: 2rem;
         width: 50%;
         background-color: black;
@@ -283,18 +278,17 @@ nav {
         display: flex;
         position: absolute;
         right: 3rem;
+        top: 1.5rem;
         font-size: 1.5rem;
         cursor: pointer;
       }
     }
   }
   .hero {
-    height: auto;
     padding: 2rem 0;
     .hero-con {
-      grid-template-columns: auto;
       text-align: center;
-      padding: 2rem;
+      padding: 5rem 2rem;
     }
   }
   /* Header */
