@@ -14,16 +14,16 @@
 }
 body {
   background-color: var(--black);
-  min-height: 100vh;
+  overflow-x: hidden !important;
 }
 .container {
-  max-width: 1200px;
+  max-width: 1320px;
   margin: 0 auto;
 }
 
 /* Header */
 nav {
-  padding: 1rem;
+  padding: 2rem;
   background: var(--black);
   position: fixed;
   top: 0;
@@ -35,13 +35,13 @@ nav {
     justify-content: space-between;
 
     .logo {
-      font-size: clamp(35px, 2.5vw, 46px);
+      font-size: clamp(50px, 2.5vw, 80px);
       color: var(--red);
       color: var(--red);
       font-weight: bold;
     }
     .menu {
-      font-size: clamp(20px, 2.5vw, 24px);
+      font-size: clamp(28px, 2.5vw, 32px);
       color: var(--red);
       display: flex;
       align-items: center;
@@ -51,21 +51,14 @@ nav {
         a {
           color: var(--red);
 
-          .border-red {
-            display: inline-flex;
-            border: 2px solid var(--red);
-            padding: 10px;
-            border-radius: 10px;
-          }
-          .btn {
+          &.btn {
             padding: 0.5rem 1rem;
             color: var(--red);
             border: 2px solid var(--red);
-            font-size: clamp(18px, 5vw, 22px);
             border-radius: 10px;
             display: inline-block;
           }
-          .btn:hover {
+          &.btn:hover {
             background: var(--red);
             color: var(--black);
             transition: all 0.3s ease-in-out;
@@ -82,16 +75,13 @@ nav {
   }
 }
 .home {
-  padding: 10rem 0;
-  align-content: center;
   animation: transition 0.8s linear;
+  padding: 20rem 0;
   .home-con {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
     align-items: center;
-    gap: 2rem;
-    padding: 2rem;
+    gap: 1rem;
     .left-con {
       img {
         width: 80%;
@@ -105,6 +95,7 @@ nav {
       .title {
         font-size: clamp(80px, 5vw, 100px);
         span {
+          font-size: clamp(80px, 5vw, 100px);
           color: var(--red);
         }
         span::after {
@@ -119,7 +110,7 @@ nav {
         margin: 1rem 0;
       }
       .desc {
-        font-size: clamp(20px, 2.5vw, 24px);
+        font-size: clamp(20px, 2.5vw, 30px);
       }
       .social-items {
         display: flex;
@@ -183,8 +174,7 @@ nav {
 
 /* Services */
 .services {
-  padding: 5rem 0;
-  align-content: center;
+  padding: 10rem 0;
   .services-con {
     padding: 2rem;
     .services-title {
@@ -253,14 +243,14 @@ nav {
           padding: 0 2rem;
 
           .desc {
-            font-size: clamp(18px, 5vw, 22px);
+            font-size: clamp(20px, 2.5vw, 25px);
             margin-bottom: 5rem;
           }
           .btn {
             padding: 1rem 4rem;
             color: var(--white);
             border: 2px solid var(--red);
-            font-size: clamp(18px, 5vw, 22px);
+            font-size: clamp(20px, 2.5vw, 25px);
             font-weight: 500;
             border-radius: 10px;
             display: inline-block;
@@ -293,6 +283,7 @@ nav {
 /* Services */
 /* Work */
 .works {
+  padding: 10rem 0;
   .works-con {
     padding: 2rem;
     .works-title {
@@ -317,25 +308,27 @@ nav {
       gap: 2rem;
 
       .works-item {
+        display: inline-block;
         animation: autoShow both;
         animation-timeline: view(70% 5%);
         padding: 2rem;
         border: 2px solid var(--red);
         border-radius: 20px;
         align-items: center;
-        box-shadow: 0 0 50px 0 var(--red);
+        box-shadow: 0 0 20px 0 var(--red);
         margin-bottom: 5rem;
+        transition: all 0.5s;
         .item-title {
-          font-size: clamp(35px, 2.5vw, 45px);
+          font-size: clamp(40px, 2.5vw, 55px);
           color: var(--white);
         }
         .item-desc {
-          font-size: clamp(22px, 2.5vw, 24px);
+          font-size: clamp(22px, 2.5vw, 26px);
           color: var(--white);
           margin-top: 2rem;
         }
         .btn {
-          font-size: clamp(22px, 2.5vw, 24px);
+          font-size: clamp(22px, 2.5vw, 26px);
           padding: 1rem 5rem;
           display: inline-flex;
           border-radius: 40px;
@@ -356,13 +349,17 @@ nav {
           transform: scale(1.1);
         }
       }
+      .works-item:hover {
+        transform: translateY(30px);
+      }
     }
   }
 }
 /* Work */
-/* Reviews */
+
+/* Test */
 .test {
-  padding: 5rem 0;
+  padding: 10rem 0;
   .test-con {
     .test-title {
       padding: 2rem;
@@ -399,6 +396,7 @@ nav {
         padding: 20px;
         transition: 0.5s;
         left: calc(50% - 190px);
+        box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
         top: 0;
         .test-header {
           display: flex;
@@ -450,87 +448,136 @@ nav {
     }
   }
 }
+/* Test */
 
-/* Reviews */
+/* Contact */
+.contact {
+  padding: 10rem 0;
+  .contact-con {
+    .contact-title {
+      padding: 2rem;
+      font-size: clamp(40px, 2.5vw, 60px);
+      color: var(--white);
+      text-align: center;
+      animation: autoShow both;
+      animation-timeline: view(70% 5%);
+      margin-bottom: 5rem;
 
-@media only screen and (max-width: 600px) {
-  /* Header */
-  nav {
-    .nav-con {
-      .menu {
-        flex-direction: column;
-        text-align: center;
-        padding: 3rem;
-        display: none;
+      span {
+        padding: 1rem 2rem;
+        border-radius: 20px;
+        box-shadow: 0 0 60px 0px red;
+      }
+    }
+    img {
+      width: 100%;
+      height: 20%;
+    }
+    .contact-form {
+      color: var(--white);
+      padding: 10rem;
+      border: 2px solid var(--white);
+      border-radius: 20px;
+      form {
+        label {
+          font-size: clamp(20px, 2.5vw, 40px);
+        }
+        input {
+          padding: 2rem;
+          width: 100%;
+          font-size: clamp(20px, 2.5vw, 25px);
+          margin: 2rem 0;
+        }
+      }
+    }
+  }
+  /* Contact */
 
-        &.active {
+  @media only screen and (max-width: 780px) {
+    /* Header */
+
+    nav {
+      .nav-con {
+        padding: 2rem;
+        .menu {
+          flex-direction: column;
+          text-align: center;
+          padding: 3rem;
+          display: none;
+
+          &.active {
+            display: flex;
+            position: absolute;
+            width: 50%;
+            right: 0;
+            background-color: black;
+            border-bottom-left-radius: 50px;
+            animation: vanish 0.5s ease;
+          }
+          li {
+            margin: 0.5rem 0;
+          }
+        }
+        .bar {
           display: flex;
           position: absolute;
-          width: 50%;
-          right: 0;
-          background-color: black;
-          border-bottom-left-radius: 50px;
-          animation: vanish 0.5s ease;
-        }
-        li {
-          margin: 0.5rem 0;
+          right: 5rem;
+          top: 4rem;
+          font-size: 2rem;
+          cursor: pointer;
         }
       }
-      .bar {
-        display: flex;
-        position: absolute;
-        right: 3rem;
-        top: 1.5rem;
-        font-size: 1.5rem;
-        cursor: pointer;
-      }
     }
-  }
-  .home {
-    padding: 2rem 0;
-    .home-con {
-      text-align: center;
-      grid-template-columns: repeat(1, 1fr);
-      padding: 5rem 2rem;
-    }
-  }
-  /* Header */
-  /* Services */
-  .services-con {
-    .services-items {
-      margin: 2rem 0;
-    }
-  }
-  /* Services */
-  /* Works */
-  .works-con {
-    .works-items {
-      .works-item {
+    .home {
+      .home-con {
         text-align: center;
+        padding: 5rem 2rem;
+        grid-template-columns: repeat(1, 1fr);
       }
     }
-  }
-  /* Works */
-  .test {
-    .test-con {
-      .test-slider {
-        #next,
-        #prev {
-          background-color: rgba(0, 0, 0, 0.4);
-          color: var(--white);
+    /* Header */
+
+    /* Services */
+    .services-con {
+      .services-items {
+        margin: 2rem 0;
+      }
+    }
+    /* Services */
+
+    /* Works */
+    .works-con {
+      .works-items {
+        .works-item {
+          text-align: center;
         }
       }
     }
-  }
-}
+    /* Works */
 
-@keyframes vanish {
-  from {
-    transform: translateY(-100px);
-    opacity: 0;
+    /* test */
+    .test {
+      .test-con {
+        .test-slider {
+          #next,
+          #prev {
+            background-color: rgba(0, 0, 0, 0.4);
+            color: var(--white);
+          }
+        }
+      }
+    }
+    /* test */
   }
-  to {
-    transform: translateY(0);
-    opacity: 1;
+
+  @keyframes vanish {
+    from {
+      transform: translateY(-100px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 }
