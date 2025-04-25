@@ -577,9 +577,11 @@ footer {
       .menu {
         flex-direction: column;
         text-align: center;
-        padding: 3rem;
+        padding: 2rem;
+        margin-top: 1.5rem;
         display: none;
-
+        position: absolute;
+        z-index: 100;
         &.active {
           display: flex;
           position: absolute;
@@ -595,8 +597,9 @@ footer {
       }
       .bar {
         display: flex;
+        z-index: 100;
         position: absolute;
-        right: 5rem;
+        right: 3rem;
         top: 4rem;
         font-size: 2rem;
         cursor: pointer;
