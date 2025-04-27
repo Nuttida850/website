@@ -1,5 +1,6 @@
 # Website
-This project built by html css and javascript for learning design website.
+This project built by html css and javascript for learning design website. <br>
+<a href="https://nuttida850.github.io/website/"> Live Preview </a>
 # Image from
 Pinterest <br>
 Freepik
